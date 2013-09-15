@@ -19,7 +19,7 @@ All source files referenced in `testem.json` are [dynamically inserted](https://
 
 ``` json
 "src_files": [
-    "./src/add.js",
-    "./test/test.js"
+    "./src/**/*.js",
+    "./test/**/*.js"
 ]
 ```
