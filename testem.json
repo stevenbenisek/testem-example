@@ -1,0 +1,16 @@
+{
+    "launch_in_dev": [
+        "chrome",
+        "firefox",
+        "opera",
+        "safari"
+    ],
+    "routes": {
+        "/test.mustache": "test/test.mustache"
+    },
+    "src_files": [
+        "./src/add.js",
+        "./test/test.js"
+    ],
+    "test_page": "test.mustache"
+}

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+    <link href="/components/jasmine/lib/jasmine-core/jasmine.css" rel="stylesheet">
+    <script src="/components/jasmine/lib/jasmine-core/jasmine.js"></script>
+    <script src="/testem.js"></script>
+    <script src="/components/jasmine/lib/jasmine-core/jasmine-html.js"></script>
+</head>
+<body>
+    {{#serve_files}}
+    <script src="{{src}}"></script>
+    {{/serve_files}}
+    <script>
+        var reporter = new jasmine.TrivialReporter,
+            env = jasmine.getEnv()
+            env.specFilter = function(spec){
+                return reporter.specFilter(spec)
+            }
+        env.addReporter(reporter)
+        env.execute()
+    </script>
+</body>
+</html>
